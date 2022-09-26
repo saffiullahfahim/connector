@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      #div1 {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: absolute;
+        left: 100px;
+        top: 50px;
+      }
+
+      #div2 {
+        width: 100px;
+        height: 100px;
+        background-color: green;
+        position: relative;
+        top: 400px;
+        left: 230px;
+      }
+    </style>
+    <div id="div1"></div>
+
+    <div id="div2"></div>
+
+    <script src="./connector.js"></script>
+    <script>
+      let start = document.querySelector("#div1");
+      let end = document.querySelector("#div2");
+
+      let connect = new Connector(start, end, document.body);
+    </script>
+  </body>
+</html>
